@@ -8,4 +8,4 @@
   Scenario: Verify the PDF of prohibitions
     Given that the user wants to use the Bancolombia Web
     When he download the PDF of prohitions
-    Then verify that see the PDF
+    Then verify that see the PDF Prohibiciones
