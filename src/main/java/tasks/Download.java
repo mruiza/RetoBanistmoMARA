@@ -1,7 +1,6 @@
 package tasks;
 
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
@@ -17,8 +16,12 @@ public class Download implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(ENTENDIDO_BUTTON)
-
+                Click.on(ENTENDIDO_BUTTON),
+                Click.on(PRODUCTS_AND_SERVICES_BUTTON),
+                Click.on(LOANS_LINK),
+                Click.on(LOANS_CAR_AND_MOTORCYCLE_LINK),
+                Click.on(RATES_AND_FEES_LINK),
+                Click.on(PROHIBITIONS_PDF_BTN)
         );
     }
 }
