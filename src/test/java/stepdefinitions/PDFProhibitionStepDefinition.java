@@ -7,6 +7,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import tasks.Download;
+import tasks.OpenUp;
 
 public class PDFProhibitionStepDefinition {
     @Before
@@ -17,18 +19,13 @@ public class PDFProhibitionStepDefinition {
     public void thatTheUserWantsToUseTheBancolombiaWeb() {
         OnStage.theActorCalled("Client").wasAbleTo(OpenUp.thePageBancolombia());
     }
+
     @When("he download the PDF of prohitions")
     public void heDownloadThePDFOfProhitions() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        OnStage.theActorInTheSpotlight().attemptsTo(Download.thePDFProhibitions());
     }
+
     @Then("verify that see the PDF")
     public void verifyThatSeeThePDF() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
     }
-
-
-
-
 }
