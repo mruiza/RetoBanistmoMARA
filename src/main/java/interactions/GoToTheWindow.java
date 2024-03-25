@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import org.openqa.selenium.WebDriver;
-
 import java.util.Set;
 
 public class GoToTheWindow implements Interaction {

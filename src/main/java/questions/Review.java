@@ -24,7 +24,6 @@ public class Review implements Question<Boolean>{
         try {
             byte[] bytesResponse = url.getBytes(Charset.forName("UTF8"));
             respuesta = new String(bytesResponse, "UTF8");
-            System.out.print(respuesta);
         } catch (Exception e) {
             e.printStackTrace();
         }

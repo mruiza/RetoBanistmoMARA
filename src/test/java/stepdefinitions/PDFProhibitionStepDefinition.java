@@ -16,20 +16,16 @@ public class PDFProhibitionStepDefinition {
     @Before
     public void setStage(){ OnStage.setTheStage(new OnlineCast());
     }
-
     @Given("that the user wants to use the Bancolombia Web")
     public void thatTheUserWantsToUseTheBancolombiaWeb() {
         OnStage.theActorCalled("Client").wasAbleTo(OpenUp.thePageBancolombia());
     }
-
     @When("he download the PDF of prohitions")
     public void heDownloadThePDFOfProhitions() {
         OnStage.theActorInTheSpotlight().attemptsTo(Download.thePDFProhibitions());
     }
-
     @Then("verify that see the PDF (.*)$")
     public void verifyThatSeeThePDFProhibiciones(String prohibitions) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Review.toThePDF(prohibitions)));
-
     }
 }

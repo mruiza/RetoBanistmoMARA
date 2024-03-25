@@ -1,6 +1,5 @@
 package userinterface;
 
-
 import net.serenitybdd.annotations.DefaultUrl;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
@@ -20,20 +19,4 @@ public class BancolombiaGroupPage extends PageObject {
             located(By.xpath("//a[contains(text(),'Tasas y tarifas')]"));
     public static final Target PROHIBITIONS_PDF_BTN = Target.the("Button for download prohibitions PDF").
             located(By.xpath("//div[@id=\"tab4\"]//a[contains(@href,'ProhibicionesSuperIntendenciaDeBancosSIB')]"));
-
-
-
-
-
-    //a[contains(text(),'Tasas y tarifas')]
-
-
-
-
-
-
-
-
-
-
 }
